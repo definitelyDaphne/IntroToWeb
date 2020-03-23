@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Intro to Web Technology</title>
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500&display=swap" rel="stylesheet"> 
+	<script src="https://use.fontawesome.com/bc4f688c94.js"></script>
+
+	<style>
+		body{
+			overflow: hidden;
+		}
+		.background{
+			background-color: #707078;
+			height:100vh;
+		}
+		.window{
+			background-color: #d8d8d8;
+			border:thick inset black;
+		}
+		.topbar{
+			background-color: #d8d8d8;
+			height:2em;
+			border-bottom: solid #4c4c4c;
+			white-space: nowrap;
+		}
+		/*span.title{
+			font: 20px 'Ubuntu', sans-serif;
+			position: absolute;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    display: inline-block;
+		    margin-top: 2px;
+		}*/
+		.navigationbar{
+			background-color: #d8d8d8;
+			height:3.1em;
+			border-bottom: solid #4c4c4c;
+		}
+		.contentpane{
+			background-color: #adadad;
+			border:solid black;
+			/*https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space*/
+			height:calc(100vh - 10em);
+			/*float:left;*/
+		}
+		.content{
+			float:left;
+			width:98%;
+			overflow-y: scroll; 
+			height:95%;
+		}
+		button.styled{
+			height:40px;
+			width:60px;
+			position:relative;
+			top:2px;
+			margin-right: 4px;
+			background-color: #cbcbcb;
+			box-shadow: inset 1px 1px 3px rgba(250, 250, 250),
+                inset -1px -1px 3px rgba(25, 25, 25, .8);
+		}
+		.styled:hover {
+    		background-color: #dddddd;
+		}
+		div.stripe{
+			width: 100%;
+			height: 20px;
+			background: linear-gradient(
+  				to bottom,
+  				#000,
+  				#000 50%,
+  				#d8d8d8 50%,
+  				#d8d8d8
+			);
+			background-size: 100% 4px;
+			margin-top: 5px;
+		}
+		div.title{
+			font: 20px 'Ubuntu', sans-serif;
+		    margin-top: 2px;
+		    display:inline-block;
+		}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="background container-fluid p-3">
+		<div class="window mx-5 pb-3 ">
+		<div class="topbar container-fluid row m-0">
+			<!-- <span class="title">Intro to Web Technology</span> -->
+			<div class="d-none d-sm-block col-lg-4 col-sm-3 justify-content-around stripe"></div>
+			<div class="col-lg-4 col-sm-6 col-xs-12 d-flex justify-content-around title">Intro to Web Technology</div>
+			<div class="d-none d-sm-block col-lg-4 col-sm-3 justify-content-around stripe"></div>
+
+		</div>
+		<div class="navigationbar container-fluid">
+			<div class="row">
+				<div class="d-inline-flex px-3">
+					<a href="https://github.com/definitelyDaphne"><svg viewBox="0 0 25 53" width="45" height="100"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></a>
+				</div>
+				<div class="d-inline-flex">
+					<button class="styled">
+						<svg style="width:40px;height:30px" viewBox="0 0 22 25">
+    						<path fill="currentColor" d="M13,22L3,12L13,2V8H21V16H13V22M6,12L11,17V14H19V10H11V7L6,12Z" />
+						</svg>
+					</button>
+					<button class="styled">
+						<svg style="width:40px;height:30px" viewBox="0 0 22 25">
+    						<path fill="currentColor" d="M11,16H3V8H11V2L21,12L11,22V16M13,7V10H5V14H13V17L18,12L13,7Z" />
+						</svg>
+					</button>
+					<button class="styled">
+						<svg style="width:40px;height:30px" viewBox="0 0 22 25">
+    						<path fill="currentColor" d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22L12 3Z" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+			<div class="contentpane mt-3 mx-3">
+				<div class="content m-3 px-3">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel convallis dolor. Cras rutrum quis nunc eget finibus. Nam est libero, convallis eget neque et, fermentum egestas sapien. Integer in diam ut sapien pretium lacinia sed quis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam ac nibh nec quam tempor accumsan. Donec vel viverra neque. Aenean orci est, tristique vitae pellentesque ut, pretium vel purus. Maecenas vehicula nulla quis vestibulum molestie.
+
+				Duis hendrerit lacinia dignissim. Ut velit lorem, porta et iaculis eu, euismod eget ipsum. Sed lacinia ligula ligula, ac interdum ex bibendum eget. Curabitur sed imperdiet arcu. Cras mattis sollicitudin metus. Phasellus facilisis nibh tellus, ut faucibus risus faucibus et. Vestibulum ac sapien est. Proin nibh magna, vulputate ut ligula a, dapibus volutpat sapien. Duis eu sodales nisi, nec imperdiet ex. Phasellus tempor nulla velit, non commodo elit blandit a. Curabitur feugiat rutrum interdum. Nunc gravida aliquet nisl sed volutpat. Quisque convallis tortor enim, sit amet congue nisi elementum sit amet. Duis congue faucibus interdum. Nam leo lectus, iaculis at ex non, feugiat porttitor elit.
+
+				Vestibulum tincidunt est vitae mattis pretium. Nullam lacinia nec elit vel cursus. Vivamus non porta urna. Nullam at sollicitudin enim. Nam aliquet nulla ut enim luctus imperdiet. Etiam sagittis nisl luctus arcu commodo sollicitudin. Nullam libero nisl, congue et arcu at, malesuada consectetur urna.
+
+				Suspendisse potenti. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam interdum ultricies pharetra. Suspendisse convallis ut urna vel ultrices. Donec eget nulla fermentum, pellentesque nibh eget, malesuada velit. Sed vestibulum, arcu iaculis pulvinar mattis, libero velit placerat dolor, sit amet laoreet ante urna quis augue. Phasellus ac mauris eu tortor egestas dapibus nec a ex. Sed consectetur dignissim turpis sed eleifend. Nunc dui augue, eleifend nec varius quis, ullamcorper quis enim. Nulla luctus risus at purus lobortis maximus. Sed eget nisi fringilla, porta ex non, finibus enim. Ut ac nisl id enim condimentum malesuada non et nunc. Nullam posuere diam id urna elementum eleifend. Curabitur at luctus odio.
+
+				Pellentesque id euismod nunc. Aenean ac leo nec justo hendrerit suscipit eu a orci. Morbi sed accumsan mi, vel laoreet tortor. Ut sed lectus sit amet odio condimentum semper. Nulla facilisi. Suspendisse vestibulum in neque ut ornare. Nullam auctor arcu eget lacus elementum, ac pharetra metus convallis. Nam sed euismod sem, sit amet ornare nulla. Nam faucibus, tortor vel mollis sodales, turpis lacus ultrices sapien, eu maximus augue erat a enim. Pellentesque tempus mattis arcu sit amet elementum. Nulla dapibus interdum sem, quis maximus augue mattis quis.
+
+				In sollicitudin diam at velit vehicula, sed sollicitudin ante scelerisque. Vestibulum sit amet lacus arcu. Integer eleifend purus eu arcu suscipit, at pellentesque augue pulvinar. Nulla non lorem vel ligula egestas egestas. Maecenas sit amet metus nec nulla dapibus pellentesque ut id lectus. Mauris at varius sapien, a ullamcorper tellus. Maecenas mollis lobortis dapibus. Nulla nibh diam, efficitur in mollis at, ultrices at nibh. Vivamus et urna at felis fringilla porttitor. Aliquam erat volutpat. Morbi maximus, turpis sit amet molestie mollis, tortor risus tincidunt est, vitae imperdiet magna magna mattis est. Cras finibus quam tortor, non convallis justo lacinia vitae. Proin mattis augue et viverra dignissim. Vestibulum rhoncus pretium lacus sed placerat. Vestibulum ac pellentesque tellus. 
+
+				Pellentesque id euismod nunc. Aenean ac leo nec justo hendrerit suscipit eu a orci. Morbi sed accumsan mi, vel laoreet tortor. Ut sed lectus sit amet odio condimentum semper. Nulla facilisi. Suspendisse vestibulum in neque ut ornare. Nullam auctor arcu eget lacus elementum, ac pharetra metus convallis. Nam sed euismod sem, sit amet ornare nulla. Nam faucibus, tortor vel mollis sodales, turpis lacus ultrices sapien, eu maximus augue erat a enim. Pellentesque tempus mattis arcu sit amet elementum. Nulla dapibus interdum sem, quis maximus augue mattis quis.
+
+				In sollicitudin diam at velit vehicula, sed sollicitudin ante scelerisque. Vestibulum sit amet lacus arcu. Integer eleifend purus eu arcu suscipit, at pellentesque augue pulvinar. Nulla non lorem vel ligula egestas egestas. Maecenas sit amet metus nec nulla dapibus pellentesque ut id lectus. Mauris at varius sapien, a ullamcorper tellus. Maecenas mollis lobortis dapibus. Nulla nibh diam, efficitur in mollis at, ultrices at nibh. Vivamus et urna at felis fringilla porttitor. Aliquam erat volutpat. Morbi maximus, turpis sit amet molestie mollis, tortor risus tincidunt est, vitae imperdiet magna magna mattis est. Cras finibus quam tortor, non convallis justo lacinia vitae. Proin mattis augue et viverra dignissim. Vestibulum rhoncus pretium lacus sed placerat. Vestibulum ac pellentesque tellus. 
+ 				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+</body>
+</html>
