@@ -1,0 +1,70 @@
+/*Layout*/
+
+body{
+	overflow: hidden;
+}
+.background{
+	background-color: #707078;
+	height:100vh;
+}
+.window{
+	background-color: #d8d8d8;
+	border:thick inset black;
+	width:50em;
+}
+.topbar{
+	background-color: #d8d8d8;
+	height:2em;
+	border-bottom: solid #4c4c4c;
+	white-space: nowrap;
+}
+.navigationbar{
+	background-color: #d8d8d8;
+	height:3.1em;
+	border-bottom: solid #4c4c4c;
+}
+.contentpane{
+	background-color: #adadad;
+	border:solid black;
+	/*https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space*/
+	height:calc(100vh - 10em);
+	/*float:left;*/
+}
+#content{
+	float:left;
+	width:98%;
+	overflow-y: scroll; 
+	height:95%;
+	font-family: Lucida Console,monospace;
+}
+button.styled{
+	height:40px;
+	width:60px;
+	position:relative;
+	top:2px;
+	margin-right: 4px;
+	background-color: #cbcbcb;
+	box-shadow: inset 1px 1px 3px rgba(250, 250, 250),
+        inset -1px -1px 3px rgba(25, 25, 25, .8);
+}
+.styled:hover {
+	background-color: #dddddd;
+}
+div.stripe{
+	width: 100%;
+	height: 20px;
+	background: linear-gradient(
+			to bottom,
+			#000,
+			#000 50%,
+			#d8d8d8 50%,
+			#d8d8d8
+	);
+	background-size: 100% 4px;
+	margin-top: 5px;
+}
+div.title{
+	font: 20px 'Ubuntu', sans-serif;
+    margin-top: 2px;
+    display:inline-block;
+}

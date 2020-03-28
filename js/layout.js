@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Intro to Web Technology</title>
-	<link rel="stylesheet" href="">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500&display=swap" rel="stylesheet">
-	<link href="main.css" rel="stylesheet">
 
-	<style>
-		
-	</style>
-</head>
-
-<body>
-	<div class="background container-fluid p-3">
+var $mainDiv = $( "#main" ),
+  		str = `
+  		<div class="background container-fluid p-3">
 		<div class="row">
 		<div class="window mx-auto pb-3 my-auto">
 		<div class="topbar container-fluid row m-0">
@@ -48,13 +34,14 @@
 			</div>
 		</div>
 			<div class="contentpane mt-3 mx-3">
-				<div class="m-3 px-3" id="content">  welcome
+				<div class="m-3 px-3" id="content">
  				</div>
 			</div>
 		</div>
 	</div>
 	</div>
-	
-	
-</body>
-</html>
+	`,
+  		html = $.parseHTML( str );
+ 
+		// Append the parsed HTML
+		$mainDiv.append( html );

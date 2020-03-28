@@ -1,0 +1,76 @@
+<!--Page demonstrated history and use of html-->
+<!--Author: Daphne Yu 22531975-->
+<!--University of Western Australia CITS3403 Agile Web Development-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Intro to Web Technology</title>
+
+	<!--third party link-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+	<!--relative link to files in repo-->
+	<link href="main.css" rel="stylesheet">
+
+	<!--page specific css style-->
+	<style>
+		em{
+			color:blue;
+			font-size: 2em;
+			font-style:normal;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="main"></div>
+	<!--use jQuery to pull html layout element from a centralised js file-->
+	<script type="text/javascript" src="js/layout.js"></script>
+	<script type="text/javascript" src="js/section.js"></script>
+
+	<script>
+		let pageBanner = document.createElement('h1');
+		pageBanner.innerHTML="CSS";
+		pageBanner.setAttribute('id','css');
+		document.getElementById('content').appendChild(pageBanner);
+
+		//add links to buttons in nav bar
+		//ids are leftArrow, rightArrow and home
+		addButtonLink("leftArrow","htmlexplained.html");
+		addButtonLink("rightArrow","jsexplained.html");
+		addButtonLink("home","");
+
+		//function defined in section.js
+		//create div of named id and put named title as the first child of that div
+		createSectionInsideContent(["Brief Intro","History","Element","Structure Example","Resources"]);
+
+		//=============== SECTION DIVIDER ===============//
+		let introDiv = document.getElementById("Brief Intro");
+		introDiv.insertAdjacentHTML('beforeend', 'yoo <em>boyz</em>');
+
+		//=============== SECTION DIVIDER ===============//
+		let historyDiv = document.getElementById("History");
+		historyDiv.insertAdjacentHTML('beforeend', 'Hyper Text Markup Language aka HTML is the standard language used to describe the meaning and structure of a web document. Hypertext made the web powerful by linking extra resources and within a page. HTML and HTTP together form the foundation of the world wide web. It was officially introduced to public by Tim Berners-Lee in 1991. The latest version to date is HTML 5 which made standard by W3C in 2014. It supports multimedia (video), graphic (canvas) and extra layout tags (nav, section).');
+
+		//=============== SECTION DIVIDER ===============//
+		let elementDiv = document.getElementById("Element");
+		elementDiv.insertAdjacentHTML('beforeend', 'yoo <em>boyz</em>');
+
+		//=============== SECTION DIVIDER ===============//
+		let structDiv = document.getElementById("Structure Example");
+		structDiv.insertAdjacentHTML('beforeend', 'yoo <em>boyz</em>');
+
+		//=============== SECTION DIVIDER ===============//
+		let resourcesDiv = document.getElementById("Resources");
+		resourcesDiv.insertAdjacentHTML('beforeend', 'yoo <em>boyz</em>');
+		
+	</script>
+
+</body>
+</html>
