@@ -34,7 +34,7 @@ var $mainDiv = $( "#main" ),
 			</div>
 		</div>
 			<div class="contentpane mt-3 mx-3">
-				<div class="m-3 px-3" id="content">
+				<div class="py-3 px-5 mx-auto" id="content">
  				</div>
 			</div>
 		</div>
