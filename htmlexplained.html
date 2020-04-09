@@ -1,6 +1,6 @@
 <!--Page demonstrated history and use of html-->
 <!--Author: Daphne Yu 22531975-->
-<!--University of Western Australia CITS3403 Agile Web Development-->
+<!--University of Western Australia CITS3403 Agile Web Development 2020 S1-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,86 +19,60 @@
 
 	<!--page specific css style-->
 	<style>
-		em{
-			color:blue;
-			font-size: 2em;
-			font-style:normal;
-		}
-		div.code{
-			background: rgba(224, 224, 226, 0.5); 
-			border-radius: 0.5em;
-			margin: 1.5em;
-			padding:0.5em;
-		}
-		pre{
-			color:#247ba0;
-			margin:0.5em;
-			overflow-wrap: break-word;
-			overflow: auto;
-		}
-		u{
-			text-decoration: underline;
-			text-decoration-style: dotted;
-			text-decoration-thickness: 0.2rem;
-			text-underline-offset: 5px;
-			color:#3958b1;
-		}
+		
 	</style>
 </head>
 
 <body>
-
-	<div id="main"></div>
-	<!--use jQuery to pull html layout element from a centralised js file-->
+	<!--use jQuery to pull html layout element from a centralised js file, append in main div-->
+	<div id="main"></div>	
 	<script type="text/javascript" src="js/layout.js"></script>
-	<script type="text/javascript" src="js/section.js"></script>
+	<script type="text/javascript" src="js/function.js"></script>
+
+	<!--content of the page starts here-->
+	<div class="Brief-Intro child">
+		<div class="row container-fluid m-0 p-0">
+			<div class="text-wrap pl-0 col-lg-6 col-sm-12" style="word-wrap:normal;">
+				<p>HTML is a markup language that defined the meaning and structure of a web document.</p>
+			</div>
+			<div class="col-lg-6 col-sm-12"><div class="d-flex justify-content-center">
+				<img src="https://preview.redd.it/m41loixjno811.jpg?width=640&crop=smart&auto=webp&s=e98299ad1e158d386cf23628f53437786b062ccc" alt="html meme" width="100%">
+			</div>
+		</div>
+	</div>
+
+	<div class="History child">
+		<p><abbr title="Hyper Text Markup Language">HTML</abbr> is the standard language used to describe the meaning and structure of a web document. It was born out of <abbr title="Standard Generalized Markup Language">SGML</abbr>, so as its sibling <abbr title="eXtensible Markup Language">XML</abbr>, they both are markup language that specify strict rules to organise data and share without misinterpretation. The main differences are: HTML focus on how the data should look on the website/web document, and it has a fix sets of tags; while XML focus more on transport the information itself, at the same time preserve its meaning, developers are welcome to invent new tag for XML.</p>
+		<p>Hypertext made the web powerful by linking extra resources and within a page. HTML and <abbr title="HyperText Transfer Protocol">HTTP</abbr> together form the foundation of the world wide web, one for creation, another for delivery. The first HTML document was officially published by Tim Berners-Lee back in 1991. It's used to give a quick overlook about <abbr title="World Wide Web">WWW</abbr> and usage of HTML. It looks quite simple, yet perfectly demonstrate the usefulness of HTML with help of hyperlink- to share and organise web resources. <a href="http://info.cern.ch/hypertext/WWW/TheProject.html">The link can be find in here.</a></p>
+		<p>HTML has certainly evolved a lot since its creation in 1989, when only few element and limited styling option are available, at the time websites look rather dull apart from some text. The latest version to date is HTML 5 which made standard by W3C in 2014. It supports most of the modern browser, graphic canvas that allow drawing using Javascript, multimedia such as video and audio element, charset attribute in meta tag that defines the standard character encoding, self-explained layout tags such as &lt;nav&gt; tag and &lt;article&gt; tag.</p>
+	</div>
+
+	<div class="Resources child">
+		<ul>
+		<li><a href="http://www.withoutbook.com/DifferenceBetweenSubjects.php?subId1=36&subId2=37&d=Difference%20between%20HTML%20and%20XML">Comparison between HTML&XML</a></li>
+		</ul>
+	</div>
+	<!--content of the page ends here-->
 
 	<script>
-		let pageBanner = document.createElement('h1');
-		pageBanner.innerHTML="HTML";
-		pageBanner.setAttribute('id','html');
-		document.getElementById('content').appendChild(pageBanner);
+		let pageTitle = document.createElement('h1');
+		pageTitle.innerHTML="HTML";
+		pageTitle.setAttribute('id','html');
+		//title is the first child in #content div
+		document.getElementById('content').appendChild(pageTitle);
 
-		//add links to buttons in nav bar
-		//ids are leftArrow, rightArrow and home
+		//add links to buttons in nav bar, ids are leftArrow, rightArrow and home
 		addButtonLink("leftArrow","");
 		addButtonLink("rightArrow","cssexplained.html");
 		addButtonLink("home","");
 
-		//function defined in section.js
-		//create div of named id and put named title as the first child of that div
-		createSectionInsideContent(["Brief Intro","History","Element","Code Structure","Resources"]);
-
-		//=============== SECTION DIVIDER ===============//
-		let introDiv = document.getElementById("Brief Intro");
-		introDiv.insertAdjacentHTML('beforeend',
-			'<div class="row container-fluid m-0 p-0">'
-			+'<div class="text-wrap pl-0 col-lg-6 col-sm-12" style="word-wrap:normal;">'
-				+'<p>HTML is a markup language that defined the meaning and structure of a web document. There\'re lots of online debate about if HTML is a programming language...</p><p><i>A:"No. HTML simply adds context and structure to text."</i></p><p><i>B:"YES, a declarative programming language."</i></p><p><i>C:"No, the clue is in the M - it\'s a Markup Language."</i></p>'
-			+'</div>'
-			+'<div class="col-lg-6 col-sm-12"><div class="d-flex justify-content-center">'
-				+'<img src="https://preview.redd.it/m41loixjno811.jpg?width=640&crop=smart&auto=webp&s=e98299ad1e158d386cf23628f53437786b062ccc" alt="html meme" width="100%">'
-			+'</div>'
-			+'</div>')
-
-		//=============== SECTION DIVIDER ===============//
-		let historyDiv = document.getElementById("History");
-		historyDiv.insertAdjacentHTML('beforeend', '<p>Hyper Text Markup Language aka HTML is the standard language used to describe the meaning and structure of a web document. Hypertext made the web powerful by linking extra resources and within a page. HTML and HTTP together form the foundation of the world wide web. The first HTML document was officially published by Tim Berners-Lee back in 1991.</p> <p>The latest version to date is HTML 5 which made standard by W3C in 2014. It supports multimedia (video), graphic (canvas) and extra layout tags (nav, section).</p>');
-
-		//=============== SECTION DIVIDER ===============//
-		let elementDiv = document.getElementById("Element");
-		elementDiv.insertAdjacentHTML('beforeend', 'Elements are the building block for html pages. An element is represented by a tag, which mostly consists of an <u>open tag</u>, its <u>content</u> and a <u>closing tag</u>. Attribute can be specified inside the open tag as well. Tags can be nested within each other, and at the end all the tags attached to the document root html tag.<br>Two nested examples '
-			+'');
-
-		//=============== SECTION DIVIDER ===============//
-		let structDiv = document.getElementById("Code Structure");
-		structDiv.insertAdjacentHTML('beforeend', 'This page itself is written in HTML, which look something similar to this: <div class="code"><pre class="text-wrap">&lt;!DOCTYPE html&gt;<br>&lt;html lang="en"&gt;<br>&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt; Intro to Web Technology &lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;link href="main.css" rel="stylesheet"&gt;<br>&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&lt/body&gt;<br>&lt;/html&gt;</pre></div>');
-
-		//=============== SECTION DIVIDER ===============//
-		let resourcesDiv = document.getElementById("Resources");
-		resourcesDiv.insertAdjacentHTML('beforeend', 'yoo <em>boyz</em>');
 		
-	</script>
+		const sectionList = ["Brief-Intro","History","Element","Code-Structure","Resources"]
+		//function defined in function.js, add divs in #content div
+		createSections(sectionList);
+		matchHTMLcontent(sectionList);
+		
+	</script>	
 
 </body>
 </html>

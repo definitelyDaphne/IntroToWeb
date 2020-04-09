@@ -1,6 +1,6 @@
 <!--Page demonstrated history and use of css-->
 <!--Author: Daphne Yu 22531975-->
-<!--University of Western Australia CITS3403 Agile Web Development-->
+<!--University of Western Australia CITS3403 Agile Web Development 2020 S1-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,57 +18,36 @@
 	<link href="main.css" rel="stylesheet">
 
 	<!--page specific css style-->
-	<style>
-		em{
-			color:blue;
-			font-size: 2em;
-			font-style:normal;
-		}
-	</style>
 </head>
 
 <body>
 
-	<div id="main"></div>
-	<!--use jQuery to pull html layout element from a centralised js file-->
+	<!--use jQuery to pull html layout element from a centralised js file, append in main div-->
+	<div id="main"></div>	
 	<script type="text/javascript" src="js/layout.js"></script>
-	<script type="text/javascript" src="js/section.js"></script>
+	<script type="text/javascript" src="js/function.js"></script>
+
+	<!--content of the page starts here-->
+
+	<!--content of the page ends here-->
 
 	<script>
-		let pageBanner = document.createElement('h1');
-		pageBanner.innerHTML="CSS";
-		pageBanner.setAttribute('id','css');
-		document.getElementById('content').appendChild(pageBanner);
+		let pageTitle = document.createElement('h1');
+		pageTitle.innerHTML="CSS";
+		pageTitle.setAttribute('id','css');
+		//title is the first child in #content div
+		document.getElementById('content').appendChild(pageTitle);
 
-		//add links to buttons in nav bar
-		//ids are leftArrow, rightArrow and home
+		//add links to buttons in nav bar, ids are leftArrow, rightArrow and home
 		addButtonLink("leftArrow","htmlexplained.html");
 		addButtonLink("rightArrow","jsexplained.html");
 		addButtonLink("home","");
 
-		//function defined in section.js
-		//create div of named id and put named title as the first child of that div
-		createSectionInsideContent(["Brief Intro","History","Element","Structure Example","Resources"]);
-
-		//=============== SECTION DIVIDER ===============//
-		let introDiv = document.getElementById("Brief Intro");
-		introDiv.insertAdjacentHTML('beforeend', 'yoo <em>boyz</em>');
-
-		//=============== SECTION DIVIDER ===============//
-		let historyDiv = document.getElementById("History");
-		historyDiv.insertAdjacentHTML('beforeend', 'yoo <em>boyz</em>');
-
-		//=============== SECTION DIVIDER ===============//
-		let elementDiv = document.getElementById("Element");
-		elementDiv.insertAdjacentHTML('beforeend', 'yoo <em>boyz</em>');
-
-		//=============== SECTION DIVIDER ===============//
-		let structDiv = document.getElementById("Structure Example");
-		structDiv.insertAdjacentHTML('beforeend', 'yoo <em>boyz</em>');
-
-		//=============== SECTION DIVIDER ===============//
-		let resourcesDiv = document.getElementById("Resources");
-		resourcesDiv.insertAdjacentHTML('beforeend', 'yoo <em>boyz</em>');
+		
+		const sectionList = ["Brief-Intro","History","Element","Code-Structure","Resources"]
+		//function defined in function.js, add divs in #content div
+		createSections(sectionList);
+		matchHTMLcontent(sectionList);
 		
 	</script>
 

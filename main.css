@@ -71,3 +71,19 @@ div.title{
     margin-top: 2px;
     display:inline-block;
 }
+#content a{
+	color:#188fa7;
+	background-color: #e2dbbe;
+}
+em{
+	color:blue;
+	font-size: 2em;
+	font-style:normal;
+}
+u{
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-thickness: 0.2rem;
+	text-underline-offset: 5px;
+	color:#3958b1;
+}
