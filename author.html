@@ -117,11 +117,12 @@
 		pageTitle.setAttribute('id','aboutme');
 		//title is the first child in #content div
 		document.getElementById('content').appendChild(pageTitle);
+		document.getElementById('subtitle').innerHTML = "Page 4 of 5<br>AuthorBio";
 
 		//add links to buttons in nav bar, ids are leftArrow, rightArrow and home
 		addButtonLink("leftArrow","jsexplained.html");
-		addButtonLink("rightArrow","");
-		addButtonLink("home","");
+		document.getElementById("rightArrow").remove();
+		addButtonLink("home","index.html");
 		
 		const sectionList = ["Daphne-Yu","Skill-set","Work-experience","Project-directory","Current-learning"];
 		//function defined in function.js, add divs in #content div

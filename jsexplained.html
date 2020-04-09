@@ -91,11 +91,12 @@
 		pageTitle.setAttribute('id','javascript');
 		//title is the first child in #content div
 		document.getElementById('content').appendChild(pageTitle);
+		document.getElementById('subtitle').innerHTML = "Page 3 of 5<br>Javascript";
 
 		//add links to buttons in nav bar, ids are leftArrow, rightArrow and home
 		addButtonLink("leftArrow","cssexplained.html");
 		addButtonLink("rightArrow","author.html");
-		addButtonLink("home","");
+		addButtonLink("home","index.html");
 		
 		const sectionList = ["Brief-Intro","Purpose-evolution","AJAX","DOM-manipulation","Resources"];
 		//function defined in function.js, add divs in #content div

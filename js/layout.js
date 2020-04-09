@@ -29,6 +29,9 @@ var $mainDiv = $( "#main" ),
 						</svg>
 					</button>
 				</div>
+
+				<div class="d-inline-flex ml-3" id="subtitle" style="line-height:1.4em"></div>
+
 			</div>
 		</div>
 			<div class="contentpane mt-3 mx-3">

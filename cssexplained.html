@@ -37,11 +37,12 @@
 		pageTitle.setAttribute('id','css');
 		//title is the first child in #content div
 		document.getElementById('content').appendChild(pageTitle);
+		document.getElementById('subtitle').innerHTML = "Page 2 of 5<br>Css";
 
 		//add links to buttons in nav bar, ids are leftArrow, rightArrow and home
 		addButtonLink("leftArrow","htmlexplained.html");
 		addButtonLink("rightArrow","jsexplained.html");
-		addButtonLink("home","");
+		addButtonLink("home","index.html");
 
 		
 		const sectionList = ["Brief-Intro","History","Element","Code-Structure","Resources"]
