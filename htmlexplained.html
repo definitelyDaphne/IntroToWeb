@@ -19,7 +19,6 @@
 
 	<!--page specific css style-->
 	<style>
-		
 	</style>
 </head>
 
@@ -47,6 +46,44 @@
 		<p>HTML has certainly evolved a lot since its creation in 1989, when only few element and limited styling option are available, at the time websites look rather dull apart from some text. The latest version to date is HTML 5 which made standard by W3C in 2014. It supports most of the modern browser, graphic canvas that allow drawing using Javascript, multimedia such as video and audio element, charset attribute in meta tag that defines the standard character encoding, self-explained layout tags such as &lt;nav&gt; tag and &lt;article&gt; tag.</p>
 	</div>
 
+	<div class="Element child">
+		<p>
+			Everything we see in the web page (well...most of the traditional web page) are HTML element, they are organised in a tree structure, pretty much like a family tree, so there are a couple of main relationships between elements, and they are:
+			<ul>
+				<li>ancestor & descendant</li>
+				<li>parent & children</li>
+				<li>siblings => they must fight</li>
+			</ul>
+			and they all trace back to one ancestor "document root"<br>
+		</p>
+		<p>
+			Each individual element must associate with an open tag, which specified the type of the element (i.e. paragraph,image etc.), some text does not require tag though, and most of them end with a close tag.<br>
+		</p>
+		<p>
+			Attributes can be used to give some more information about this element we're dealing with, for example, width of the picture etc.<br></p>
+		<p>
+			Even though elements have a group/tag they belong to, sometimes we would like to pinpoint a particular element, and that's when we give element of interest name,id or class name. Later on some methods can be use to find the nominated element, and they are:
+			<ul>
+				<li>getElementById(id_string)</li>
+				<li>getElementsByTagName(tag_name)</li>
+				<li>getElementsByClassName(class_values)</li>
+				<li>getElementsByName(name_string)</li>
+			</ul>
+		</p>
+
+		<em>Example~~~</em><br>
+		<p>The stripe at the top bar<div class="d-none d-sm-block col-lg-4 col-sm-3 justify-content-around stripe"></div>
+		It is a <u>division element</u>, basically just a block, I then use some css style to make it look more interesting than just a space reserved for nothing.</p>
+		<p>The moving title at the top<br><marquee class="title" width=300>Intro to Web Technology</marquee><br>
+		It is nothing complicated but some text wrap in <u>marquee element</u>, which I came across on the internet and thought was pretty lit and decide to use it.</p>
+		<p>The buttons at the top
+			<button class="styled">
+				<svg style="width:40px;height:30px" viewBox="0 0 22 25">
+    				<path fill="currentColor" d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22L12 3Z" />
+				</svg>
+			</button><br>It is a <u>button element</u> which has a <u>svg element</u> inside which has another nested <u>path element</u> inside.<br> The <u>d attribute</u> in the path element is required to define the vector path to be drawn for the svg picture.<br>Side note: use svg for icon if possible because it is highly scalable and lightweight, I personally like it because I can just get the path and embed in element, no download and store images needed.</p>
+	</div>
+
 	<div class="Resources child">
 		<ul>
 		<li><a href="http://www.withoutbook.com/DifferenceBetweenSubjects.php?subId1=36&subId2=37&d=Difference%20between%20HTML%20and%20XML">Comparison between HTML&XML</a></li>
@@ -68,7 +105,7 @@
 		addButtonLink("home","index.html");
 
 		
-		const sectionList = ["Brief-Intro","History","Element","Code-Structure","Resources"]
+		const sectionList = ["Brief-Intro","History","Element","Resources"]
 		//function defined in function.js, add divs in #content div
 		createSections(sectionList);
 		matchHTMLcontent(sectionList);

@@ -96,3 +96,19 @@ function addSkill(level,name,description){
 
 	document.getElementsByClassName("Skill-set")[0].appendChild(skillDiv);
 }
+
+
+function resetZero(){
+
+    let m = document.getElementById('margin');
+    let p = document.getElementById('padding');
+    let b = document.getElementById('border')
+
+    m.style.margin='0px';
+    p.style.padding='0px';
+    b.style.border='0px solid';
+
+    m.value="0";
+    p.value="0";
+    b.value="0";
+}
