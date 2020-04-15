@@ -29,6 +29,7 @@ depends on what account they log in, redirect the user to either student home pa
 
 
 **Student's tabs**
+
 - main
 display completed task, mark, date completed etc.
 - subjects
@@ -49,6 +50,7 @@ manual marking for the quiz that label as short answer
 use dropdown to select what measure to use for constructing analytical graph
 
 **Quizzes format**
+
 will create both MCQ and short answer template, decide not to mix both in one quiz sheet
 
 **Account**
@@ -58,6 +60,7 @@ will create both MCQ and short answer template, decide not to mix both in one qu
 need to sort out how account work
 
 **Database**
+
 seems like we are good to choose whatever suitable for the app, or choose some modules that work well with flask
 
 ## Todos
