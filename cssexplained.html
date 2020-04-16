@@ -29,15 +29,79 @@
 
 	<!--use jQuery to pull html layout element from a centralised js file, append in main div-->
 	<div id="main"></div>	
-	<script type="text/javascript" src="js/layout.js"></script>
-	<script type="text/javascript" src="js/function.js"></script>
+	<script src="js/layout.js"></script>
+	<script src="js/function.js"></script>
 
 	<!--content of the page starts here-->
 
+	<div class="Brief-Intro child">
+		<div class="row container-fluid m-0 p-0">
+			<div class="text-wrap pl-0 col-lg-6 col-sm-12" style="word-wrap:normal;">
+				<p>CSS makes the web page more appealing, it gives the plain html pages a style, a personality. <br>Browsing the internet is more like a delightful experience than simply a place to get information.</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<div class="d-flex justify-content-center">
+				<img src="https://i.imgur.com/r8T1bpIg.jpg" alt="css meme" style="width:90%">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="History&Purpose child">
+		<p>
+		Shortly after www and html marked their debut, people started thinking, is there a way to make the web page look more attractive...?
+		</p>
+		<p>
+		Although some early browsers have own internal style language to format the content, developers had no control over it; therefore, didn't get the chance to harvest the benefit.
+		</p>
+		<p>
+		Frustrated by the failure of trying to layout webpage in an aethetic way using pure HTML, web professionalist decides to introduce new technology - CSS into the web domain. Before this measure took place, developers have no other way to do proper layout except to misuse table and invisible block divisions to achieve the desired outcome, this approach is less than ideal.
+		</p>
+		<p>
+		There were a few potential candidates competing for the formal style language place. CSS stands out by providing the distinctive cascading feature. It takes users preference into account, rules with different privilege level competing using some predefined algorithm, to decide which one to display at the end result page.
+		</p>
+		CSS allows separation between content from presentation, which brought several benefits:<br>
+		<ul>
+		<li><u>efficiency and maintainability</u></li>
+
+		html and css both ONLY do what they are suppose to do, and do it well. Developer only have to surround the text in html with proper tags, and later on in CSS define how should each type of tag look like. It saves time of recurring apply style to the same tag, and allow centralise the style in one place. Changing style becomes a much simpler process. Also it's simple enough to keep similar presentation across different part of the website for an organisation.
+
+		<li><u>performance</u></li>
+
+		Separating style segment directly reduce the repitition and thus the file size; thus, save some download time and speed up page rendering.
+		</ul>
+		<em>Example:see how much different stylesheet makes by removing it</em><br>
+		This button will change to "APPLY CSS" after removed css, so you can toggle it back the same place, how sweet ;)<br><br>
+		<button id="togglebtn" type="button" onclick="togglecss();">Remove stylesheet</button>
+	</div>
+
 	<div class="Box-model child">
+		<p>
+			CSS is very handy for adjusting space between and within element. The <u>box model</u> divides the block element into 4 parts, from outside to inside are:
+			<ol>
+				<li>Margin</li>
+				<li>Border</li>
+				<li>Padding</li>
+				<li>Actual content</li>
+			</ol>
+			The below picture gives a better idea about how the box model looks like.
+		</p>
+		<p>
+			Margin and padding got 4 sides each (top, bottom, left, right), and can be adjusted separately.
+		</p>
+		<img src="https://hackernoon.com/hn-images/1*2jZwpWH9XO_QllhEpyGqMA.png" alt="box model" style="width:75%" class="mb-4">
 		<div class="row">
 			<div class="col-7">
-				HTML and CSS works closely with each other to ensure
+				<p>
+					At the right hand side is a simple demenstration about what each part represents. The number input field itself is a block element. The number inside is its child, in other word, content.
+				</p>
+				Here's a text summary about each:<br>
+				<ul>
+					<li>Margin - the space outside, dictate how much distance between this element and other element.</li>
+					<li>Padding - the space inside, dictate how close the content is to the border.</li>
+					<li>Border - the outline of the block container.</li>
+				</ul>
+				Try out the example to learn more!
 			</div>
 			<div class="col-5">
 				<em style="font-size: 1.3em">Example: try to change the value for each of them (recommend using arrow key)</em>
@@ -59,6 +123,14 @@
 			</div>
 
 		</div>
+
+		<div class="Resources child">
+			<ul>
+				<li><a href="https://guides.codechewing.com/js/disable-enable-stylesheet-javascript">How to disable or enable a stylesheet in JavaScript</a></li>
+				<li><a href="https://blogs.adobe.com/creativecloud/the-evolution-of-css/">The evolution of CSS</a></li>
+			</ul>
+		</div>
+
 	</div>
 
 	<!--content of the page ends here-->
@@ -77,7 +149,7 @@
 		addButtonLink("home","index.html");
 
 		
-		const sectionList = ["Brief-Intro","History","Box-model","Resources"]
+		const sectionList = ["Brief-Intro","History&Purpose","Box-model","Selector","Resources"]
 		//function defined in function.js, add divs in #content div
 		createSections(sectionList);
 		matchHTMLcontent(sectionList);

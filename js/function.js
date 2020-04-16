@@ -112,3 +112,18 @@ function resetZero(){
     p.value="0";
     b.value="0";
 }
+
+function togglecss(){
+    let btn = document.getElementById("togglebtn");
+    if(btn.innerHTML === "Remove stylesheet"){
+        document.styleSheets[0].disabled = true;
+        document.styleSheets[2].disabled = true;
+        document.getElementById("togglebtn").innerHTML="APPLY CSS!!!!";
+    }
+    else{
+        document.styleSheets[0].disabled = false;
+        document.styleSheets[2].disabled = false;
+        document.getElementById("togglebtn").innerHTML="Remove stylesheet";
+    }
+}
+

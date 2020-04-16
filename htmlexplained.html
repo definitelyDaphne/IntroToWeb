@@ -25,8 +25,8 @@
 <body>
 	<!--use jQuery to pull html layout element from a centralised js file, append in main div-->
 	<div id="main"></div>	
-	<script type="text/javascript" src="js/layout.js"></script>
-	<script type="text/javascript" src="js/function.js"></script>
+	<script src="js/layout.js"></script>
+	<script src="js/function.js"></script>
 
 	<!--content of the page starts here-->
 	<div class="Brief-Intro child">
@@ -34,8 +34,10 @@
 			<div class="text-wrap pl-0 col-lg-6 col-sm-12" style="word-wrap:normal;">
 				<p>HTML is a markup language that defined the meaning and structure of a web document.</p>
 			</div>
-			<div class="col-lg-6 col-sm-12"><div class="d-flex justify-content-center">
-				<img src="https://preview.redd.it/m41loixjno811.jpg?width=640&crop=smart&auto=webp&s=e98299ad1e158d386cf23628f53437786b062ccc" alt="html meme" width="100%">
+			<div class="col-lg-6 col-sm-12">
+				<div class="d-flex justify-content-center">
+					<img src="https://preview.redd.it/m41loixjno811.jpg?width=640&crop=smart&auto=webp&s=e98299ad1e158d386cf23628f53437786b062ccc" alt="html meme">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -54,13 +56,14 @@
 				<li>parent & children</li>
 				<li>siblings => they must fight</li>
 			</ul>
-			and they all trace back to one ancestor "document root"<br>
+			and they all trace back to one ancestor "document root"
 		</p>
 		<p>
-			Each individual element must associate with an open tag, which specified the type of the element (i.e. paragraph,image etc.), some text does not require tag though, and most of them end with a close tag.<br>
+			Each individual element must associate with an open tag, which specified the type of the element (i.e. paragraph,image etc.), some text does not require tag though, and most of them end with a close tag.
 		</p>
 		<p>
-			Attributes can be used to give some more information about this element we're dealing with, for example, width of the picture etc.<br></p>
+			Attributes can be used to give some more information about this element we're dealing with, for example, width of the picture etc.
+		</p>
 		<p>
 			Even though elements have a group/tag they belong to, sometimes we would like to pinpoint a particular element, and that's when we give element of interest name,id or class name. Later on some methods can be use to find the nominated element, and they are:
 			<ul>
@@ -74,8 +77,9 @@
 		<em>Example~~~</em><br>
 		<p>The stripe at the top bar<div class="d-none d-sm-block col-lg-4 col-sm-3 justify-content-around stripe"></div>
 		It is a <u>division element</u>, basically just a block, I then use some css style to make it look more interesting than just a space reserved for nothing.</p>
-		<p>The moving title at the top<br><marquee class="title" width=300>Intro to Web Technology</marquee><br>
-		It is nothing complicated but some text wrap in <u>marquee element</u>, which I came across on the internet and thought was pretty lit and decide to use it.</p>
+		The moving title at the top<br>
+		<marquee class="title" width=300>Intro to Web Technology</marquee><br>
+		<p>It is nothing complicated but some text wrap in <u>marquee element</u>, which I came across on the internet and thought was pretty lit and decide to use it.</p>
 		<p>The buttons at the top
 			<button class="styled">
 				<svg style="width:40px;height:30px" viewBox="0 0 22 25">

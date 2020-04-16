@@ -24,8 +24,8 @@
 <body>
 	<!--use jQuery to pull html layout element from a centralised js file, append in main div-->
 	<div id="main"></div>	
-	<script type="text/javascript" src="js/layout.js"></script>
-	<script type="text/javascript" src="js/function.js"></script>
+	<script src="js/layout.js"></script>
+	<script src="js/function.js"></script>
 
 	<!--content of the page starts here-->
 	<div class="Brief-Intro child">
@@ -35,7 +35,7 @@
 			</div>
 			<div class="col-lg-6 col-sm-12">
 				<div class="d-flex justify-content-center">
-				<img src="https://i.kym-cdn.com/photos/images/newsfeed/001/518/000/4bc.jpg" alt="javascript meme" width="75%">
+				<img src="https://i.kym-cdn.com/photos/images/newsfeed/001/518/000/4bc.jpg" alt="javascript meme" style="width:75%">
 				</div>
 			</div>
 		</div>
@@ -49,8 +49,8 @@
 
 	<div class="AJAX child">
 		<div style="position: relative; left: 0; top: 0;">
-			<img src="https://i.ebayimg.com/00/s/ODAwWDgwMA==/z/pL8AAOSwIZJeEtL0/$_57.JPG?set_id=8800005007" alt="ajax" width=300px style="position:relative;z-index: 1;">
-			<img src="https://cdn.onlinewebfonts.com/svg/img_574496.png" alt="cross" width=300px style="position:absolute;left:0;top:0;z-index:2;">
+			<img src="https://i.ebayimg.com/00/s/ODAwWDgwMA==/z/pL8AAOSwIZJeEtL0/$_57.JPG?set_id=8800005007" alt="ajax" width=300 style="position:relative;z-index: 1;">
+			<img src="https://cdn.onlinewebfonts.com/svg/img_574496.png" alt="cross" width=300 style="position:absolute;left:0;top:0;z-index:2;">
 		</div>
 		<span>Not this AJAX...</span>
 		<p>AJAX stands for Asynchronous JavaScript and XML(despite the fact that nowadays we use JSON more). It\'s a technique that allows user to send a request and carry on, and deal with the response later on when have one.</p>
@@ -58,7 +58,7 @@
 		<p>By combining AJAX technique and third party API, web developers no longer have to worry about the data source or data storage (well.. in some scenarios) It is as simple as making query to a url address. </p>
 		<em>Example: try to search your favourite movie below</em><br>
 		<input type="text" id="search" name="movieSearchKeyword" value="back to the future">
-		<button type="button" onclick=loadAJAX(document.getElementById("search").value);>Submit</button>
+		<button type="button" onclick="loadAJAX(document.getElementById('search').value);">Submit</button>
 		<div id="result"></div>
 	</div>
 
