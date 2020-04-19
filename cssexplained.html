@@ -22,6 +22,21 @@
 		sub{
 			color:red;
 		}
+		li[type="circle"]{
+			color: #6A5ACD;
+			font-size: 1.5em;
+			text-shadow:
+       2px 2px 0 #191970,
+     -1px -1px 0 #FF1493,  
+      1px -1px 0 #FF1493,
+      -1px 1px 0 #FF1493,
+       1px 1px 0 #191970;
+		}
+		pre{
+			background-color: #dddddd;
+			border-radius: 5px;
+			display:inline;
+		}
 	</style>
 </head>
 
@@ -122,6 +137,33 @@
 				</script>
 			</div>
 
+		</div>
+
+		<div class="Selector child">
+			<p>Selector in CSS is one way to target HTML element and apply style on it. There are a range of selectors with different functionality, when used in combination it becomes much more powerful. Below are some of the selectors and example referred back to this web page:</p>
+			<ul>
+				<li type="circle">Tag selector</li>
+				Used to select single type of tag, for example, in the stylesheet main.css I defined how I want my emphasis, underline and pre(for displaying code)look like by doing <pre> em{} </pre> and <pre> u{} </pre> and <pre> pre{} </pre>
+				<li type="circle">Class selector</li>
+				Used to select element with certain classes, for example, in main.css I have <pre> div.stripe </pre> to style the stripe division box at the top bar. Putting <pre> div </pre> in front is to confine the rule to only apply on the div that has class stripe, so other element can have class stripe but not getting the effect.
+				<li type="circle">ID selector</li>
+				Used to select element with specific ID. For example, the id content refer to, apparently, all the content that are within the scrollable div region. The selector <pre> #content </pre> is used to define the overflow, float and font property in main.css.
+				<li type="circle">All selector</li>
+				Use <pre>&nbsp;*&nbsp;</pre> to include all element. I did not use it in this site.
+				<li type="circle">Group selector</li>
+				Use comma separated selectors to apply style in a group of element. For example, I divided my fake browser window into three components: topbar(the one contains title and stripe div), navbar(contains buttons) and the windows(contain content). To make their background colour the same, I used <pre> .window, .topbar, .navigationbar </pre> to capture them in one group, then assign background colour to the group.
+				<li type="circle">Descendent selector</li>
+				Used to select descendant of an element, it does not have to be direct child. For example, <pre> #content a </pre> is used to style all the links inside the content area, this case if there's link in let's say nav bar, it won't be affected by the rule.
+				<li type="circle">Direct child selector</li>
+				Similar to descendant selector, but only apply to direct child (one level down). Use ">" notation.
+				<li type="circle">Sibling selector</li>
+				Select element in the same level. Use "+" notation.
+				<li type="circle">Atribute selector</li>
+				Used to select element with specified attribute presented. For example, the attribute type="circle" is used to make the bullet point for this list hollow circle. I then use <pre> li[type="circle"] </pre> to select the list item and change the colour for all of them.
+				<li type="circle">Pseudo class selector</li>
+				Applicable when some event happened for a particular element. Example can be seen in the navbar button styling i.e. <pre> .styled:hover </pre>, when mouse hovering over the button, the background colour becomes lighter. Also the buttons in the home page,<pre> .button-styled:active </pre> is used. It applies some shadow when the button is clicked to give the impression of something's happening.
+
+			</ul>
 		</div>
 
 		<div class="Resources child">

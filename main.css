@@ -8,21 +8,25 @@ body{
 	height:100vh;
 }
 .window{
-	background-color: #d8d8d8;
 	border:thick inset black;
 	width:50em;
 }
 .topbar{
-	background-color: #d8d8d8;
 	height:2em;
-	border-bottom: solid #4c4c4c;
 	white-space: nowrap;
 }
 .navigationbar{
-	background-color: #d8d8d8;
 	height:3.1em;
+}
+
+.window, .topbar, .navigationbar{
+	background-color: #d8d8d8;
+}
+
+.topbar, .navigationbar{
 	border-bottom: solid #4c4c4c;
 }
+
 .contentpane{
 	background-color: #adadad;
 	border:solid black;
