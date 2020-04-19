@@ -91,3 +91,8 @@ u{
 	text-underline-offset: 5px;
 	color:#6a3e37;
 }
+li[type="circle"]{
+	color: #6A5ACD;
+	font-size: 1.5em;
+	text-shadow:2px 2px 0 #191970,-1px -1px 0 #FF1493,1px -1px 0 #FF1493,-1px 1px 0 #FF1493,1px 1px 0 #191970;
+}

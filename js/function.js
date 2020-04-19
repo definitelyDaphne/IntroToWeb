@@ -122,6 +122,7 @@ function togglecss(){
     }
     else{
         document.styleSheets[0].disabled = false;
+        document.styleSheets[1].disabled = false;
         document.styleSheets[2].disabled = false;
         document.getElementById("togglebtn").innerHTML="Remove stylesheet";
     }
